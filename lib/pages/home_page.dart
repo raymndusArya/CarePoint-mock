@@ -12,12 +12,7 @@ class HomePage extends StatelessWidget {
 
   final controller = Get.put(BottomBarController());
 
-  final menus = const [
-    HomeMenu(),
-    TipsMenu(),
-    ChatMenu(),
-    ProfileMenu(),
-  ];
+  final menus = [HomeMenu(), TipsMenu(), ChatMenu(), ProfileMenu()];
 
   @override
   Widget build(BuildContext context) {

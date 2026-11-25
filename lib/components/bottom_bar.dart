@@ -12,14 +12,14 @@ class CustomBottomBar extends StatelessWidget {
 
   static const barColor = Color(0xFF4A6659);
 
-  static const _icons = [
+  static const icons = [
     Icons.home_outlined,
     Icons.menu_book_outlined,
     Icons.chat_bubble_outline,
     Icons.person_outline,
   ];
 
-  static const _activeIcons = [
+  static const activeIcons = [
     Icons.home_rounded,
     Icons.menu_book_rounded,
     Icons.chat_bubble_rounded,
@@ -28,7 +28,7 @@ class CustomBottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final count = _icons.length;
+    final count = icons.length;
 
     // posisi pill: -1 (paling kiri) sampai 1 (paling kanan)
     final alignX = -1 + (2 * currentIndex / (count - 1));
@@ -79,7 +79,7 @@ class CustomBottomBar extends StatelessWidget {
                       scale: selected ? 1.1 : 1.0,
                       duration: const Duration(milliseconds: 250),
                       child: Icon(
-                        selected ? _activeIcons[i] : _icons[i],
+                        selected ? activeIcons[i] : icons[i],
                         size: 28,
                         color: selected
                             ? Colors.white

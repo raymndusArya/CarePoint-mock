@@ -8,3 +8,4 @@ class LoginController extends GetxController {
     Get.toNamed(Routes.loginFormPage);
   }
 }
+

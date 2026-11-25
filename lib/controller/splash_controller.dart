@@ -15,6 +15,6 @@ class SplashController extends GetxController {
 
   Future<void> goToNext() async {
     await Future.delayed(delay);
-    Get.to(nextRoute);
+    Get.offNamed(nextRoute);
   }
 }

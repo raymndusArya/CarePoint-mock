@@ -23,8 +23,8 @@ class Header extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(24, topInset + 20, 24, 24),
       decoration: BoxDecoration(
         color: backgroundColor,
-        borderRadius: const BorderRadius.vertical(bottom: Radius.circular(24)),
-        boxShadow: const [
+        borderRadius: BorderRadius.vertical(bottom: Radius.circular(70)),
+        boxShadow: [
           BoxShadow(
             color: Color(0x33000000),
             blurRadius: 20,
@@ -34,17 +34,14 @@ class Header extends StatelessWidget {
       ),
       child: Row(
         children: [
-          CircleAvatar(
-            radius: 28,
-            backgroundImage: AssetImage(avatarPath),
-          ),
-          const SizedBox(width: 16),
+          CircleAvatar(radius: 28, backgroundImage: AssetImage(avatarPath)),
+          SizedBox(width: 16),
           Expanded(
             child: Text(
               name,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: 'PlusJakartaSans',
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
@@ -54,7 +51,7 @@ class Header extends StatelessWidget {
           ),
           IconButton(
             onPressed: onNotificationTap ?? () {},
-            icon: const Icon(
+            icon: Icon(
               Icons.notifications,
               color: Colors.white,
               size: 28,

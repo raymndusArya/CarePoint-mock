@@ -13,59 +13,76 @@ class SplashPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: bgColor,
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              width: 134,
-              height: 134,
-              padding: EdgeInsets.all(29),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(45),
-                boxShadow: [
-                  BoxShadow(
-                    color: Color(0xFF1E2A5A).withOpacity(0.12),
-                    blurRadius: 32,
-                    offset: Offset(0, 16),
-                  ),
-                ],
+        // Animasi fade & scale lembut saat splash muncul
+        child: TweenAnimationBuilder<double>(
+          tween: Tween(begin: 0.0, end: 1.0),
+          duration: Duration(milliseconds: 1000),
+          curve: Curves.easeOutBack,
+          builder: (context, value, child) {
+            return Transform.scale(
+              scale: value,
+              child: Opacity(
+                opacity: value.clamp(0.0, 1.0),
+                child: child,
               ),
-              child: Image.asset(
-                'lib/assets/images/leaf.png',
-                fit: BoxFit.contain,
+            );
+          },
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 134,
+                height: 134,
+                padding: EdgeInsets.all(29),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(45),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0xFF1E2A5A).withOpacity(0.12),
+                      blurRadius: 32,
+                      offset: Offset(0, 16),
+                    ),
+                  ],
+                ),
+                child: Image.asset(
+                  'lib/assets/images/leaf.png',
+                  fit: BoxFit.contain,
+                ),
               ),
-            ),
-            SizedBox(height: 48),
+              SizedBox(height: 48),
 
-            Text(
-              'CarePoint',
-              style: TextStyle(
-                fontFamily: 'PlusJakartaSans',
-                fontSize: 35,
-                fontWeight: FontWeight.w700,
-                color: Colors.black,
+              Text(
+                'CarePoint',
+                style: TextStyle(
+                  fontFamily: 'PlusJakartaSans',
+                  fontSize: 35,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                ),
               ),
-            ),
-            SizedBox(height: 10),
-            Text(
-              'Safe Space',
-              style: TextStyle(
-                fontFamily: 'Prata',
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-                color: Colors.black,
+              SizedBox(height: 10),
+              Text(
+                'Safe Space',
+                style: TextStyle(
+                  fontFamily: 'Prata',
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                ),
               ),
-            ),
-            SizedBox(height: 28),
-            Text('CarePoint by leaf team',
-            style: TextStyle(
-              fontFamily: 'PlusJakartaSans',
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-              color: Colors.black87
-            ),)
-          ],
+              SizedBox(height: 28),
+              Text(
+                'CarePoint by leaf team',
+                style: TextStyle(
+                  fontFamily: 'PlusJakartaSans',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black87,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

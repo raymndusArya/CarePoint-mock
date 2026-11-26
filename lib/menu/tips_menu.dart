@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:carepoint/routes.dart';
 import 'package:carepoint/controller/home_controller.dart';
 import 'package:carepoint/components/header.dart';
-import 'package:carepoint/components/tip_suggestion_card.dart'; // <- Import dari components
+import 'package:carepoint/components/tip_suggestion_card.dart'; 
 
 class TipsMenu extends StatelessWidget {
-  TipsMenu({super.key});
+  const TipsMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +30,8 @@ class TipsMenu extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // -------------------------------------------------------------
+              
                 // Bagian: Sedang Populer
-                // -------------------------------------------------------------
                 Text(
                   'Sedang Populer',
                   style: TextStyle(

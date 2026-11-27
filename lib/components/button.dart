@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomOperatorButton extends StatelessWidget {
+class Button extends StatelessWidget {
   final String myText;
   final VoidCallback onPressed;
   final Color color;
@@ -9,7 +9,7 @@ class CustomOperatorButton extends StatelessWidget {
   final double height;
   final Widget? leading; // ikon/logo di kiri teks (opsional)
 
-  const CustomOperatorButton({
+  const Button({
     super.key,
     required this.myText,
     required this.onPressed,
@@ -56,7 +56,7 @@ class CustomOperatorButton extends StatelessWidget {
               myText,
               style: TextStyle(
                 fontFamily: 'PlusJakartaSans',
-                fontSize: 20,
+                fontSize: 17,
                 fontWeight: FontWeight.w500,
                 color: textColor,
               ),

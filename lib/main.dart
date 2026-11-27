@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Belajar Flutter Raymundus Arya',
+      title: 'CarePoint',
       initialRoute: Routes.splashPage,
       debugShowCheckedModeBanner: false,
       getPages: Routes.myPages,

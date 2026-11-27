@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:carepoint/routes.dart';
 import 'package:carepoint/controller/home_controller.dart';
 import 'package:carepoint/components/header.dart';
-import 'package:carepoint/components/greeting.dart'; // <- Import file baru
+import 'package:carepoint/components/greeting.dart';
 import 'package:carepoint/components/mood_card.dart';
 import 'package:carepoint/components/motivation_card.dart';
 
@@ -28,13 +28,13 @@ class HomeMenu extends StatelessWidget {
         // Konten Scrollable
         Expanded(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(24, 32, 24, 120),
+            padding: EdgeInsets.fromLTRB(24, 32, 24, 120),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // Greeting Component
                 HomeGreeting(name: controller.userName),
-                const SizedBox(height: 28),
+                SizedBox(height: 28),
 
                 // Mood Card Component
                 Obx(
@@ -43,7 +43,7 @@ class HomeMenu extends StatelessWidget {
                     onSelectMood: controller.selectMood,
                   ),
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20),
 
                 // Motivation Card Component
                 MotivationCard(text: controller.motivation),

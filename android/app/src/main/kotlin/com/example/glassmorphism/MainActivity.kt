@@ -1,4 +1,4 @@
-package com.example.glassmorphism
+package com.example.carepoint
 
 import io.flutter.embedding.android.FlutterActivity
 

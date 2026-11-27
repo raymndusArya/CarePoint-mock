@@ -17,7 +17,7 @@ class HomeGreeting extends StatelessWidget {
       children: [
         Text(
           'Halo! $name',
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: 'PlusJakartaSans',
             fontSize: 24,
             fontWeight: FontWeight.w500,
@@ -25,10 +25,10 @@ class HomeGreeting extends StatelessWidget {
           ),
         ),
         if (subtitle != null) ...[
-          const SizedBox(height: 8),
+          SizedBox(height: 8),
           Text(
             subtitle!,
-            style: const TextStyle(
+            style: TextStyle(
               fontFamily: 'PlusJakartaSans',
               fontSize: 14,
               color: Colors.black,

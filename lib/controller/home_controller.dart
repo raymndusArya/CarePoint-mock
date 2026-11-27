@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 class HomeController extends GetxController {
   // Data user (nanti bisa diambil dari hasil login)
   final userName = 'Fernando Torres';
-  final avatarPath = 'lib/assets/images/leaf.png';
+  final avatarPath = 'lib/assets/images/profile_pic.JPG';
 
   // Kalimat motivasi hari ini
   final motivation =

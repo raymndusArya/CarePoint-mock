@@ -72,7 +72,7 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 const Spacer(), // dorong tombol ke bawah
-                CustomOperatorButton(
+                Button(
                   myText: 'Login',
                   onPressed: () {
                     Get.toNamed(Routes.loginFormPage);

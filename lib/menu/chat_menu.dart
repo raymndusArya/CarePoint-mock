@@ -86,7 +86,7 @@ class ChatMenu extends StatelessWidget {
                   subtitleColor: Colors.white70,
                   dividerColor: Colors.white24,
                   onTap: () {
-                    // TODO: Aksi pencarian konselor
+                    Get.toNamed(Routes.conselorPage);
                   },
                 ),
                 SizedBox(height: 16),
